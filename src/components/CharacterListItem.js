@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import CharacterDetails from './CharacterDetails.js';
 import {CharacterContext} from './CharacterList.js';
 
 
@@ -9,7 +10,8 @@ function CharacterListItem() {
 
     return(
         <div>
-
+            {characterContext.characters.map(character => 
+                <CharacterDetails character={character} key={character.id}/>)}
         </div>
     )
 }
