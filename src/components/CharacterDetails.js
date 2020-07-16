@@ -13,7 +13,9 @@ function CharacterDetails(props) {
     }
 
     return(
-        <div>
+        <div className="Container">
+            <img className="box-1" src={props.character.image}/>
+            <div className="box-2">
             <h2>{props.character.name}</h2>
             <h3>Status: {props.character.status}</h3>
             <h3>Species: {props.character.species}</h3>
@@ -22,6 +24,8 @@ function CharacterDetails(props) {
             <h3>Location: {props.character.location.name}</h3>
             <button onClick={() => setButtonToggle(prev => !prev)}>{buttonDisplay}</button>
             {buttonToggle && <EpisodeList episodes={props.character.episode}/>} 
+            </div>
+            
         </div>
     )
 }

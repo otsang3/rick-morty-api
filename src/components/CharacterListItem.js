@@ -9,7 +9,7 @@ function CharacterListItem() {
     const characterContext = useContext(CharacterContext);
 
     return(
-        <div>
+        <div className="Container">
             {characterContext.characters.map(character => 
                 <CharacterDetails character={character} key={character.id}/>)}
         </div>
