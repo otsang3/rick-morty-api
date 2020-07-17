@@ -37,7 +37,7 @@ function CharacterList() {
             dispatch({type: 'FETCH_SUCCESS', payload: data.results})
         })
         .catch(error => dispatch({type: 'FETCH_ERROR'}))
-    })
+    }, [])
 
     return(
         <div>

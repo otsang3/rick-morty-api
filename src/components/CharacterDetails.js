@@ -13,17 +13,17 @@ function CharacterDetails(props) {
     }
 
     return(
-        <div className="Container">
+        <div className="Main-Container">
             <img className="box-1" src={props.character.image}/>
             <div className="box-2">
-            <h2>{props.character.name}</h2>
-            <h3>Status: {props.character.status}</h3>
-            <h3>Species: {props.character.species}</h3>
-            <h3>Gender: {props.character.gender}</h3>
-            <h3>Origin: {props.character.origin.name}</h3>
-            <h3>Location: {props.character.location.name}</h3>
-            <button onClick={() => setButtonToggle(prev => !prev)}>{buttonDisplay}</button>
-            {buttonToggle && <EpisodeList episodes={props.character.episode}/>} 
+                <h3>{props.character.name}</h3>
+                <p>Status: {props.character.status}</p>
+                <p>Species: {props.character.species}</p>
+                <p>Gender: {props.character.gender}</p>
+                <p>Origin: {props.character.origin.name}</p>
+                <p>Location: {props.character.location.name}</p>
+                <button onClick={() => setButtonToggle(prev => !prev)}>{buttonDisplay}</button>
+                {buttonToggle && <EpisodeList episodes={props.character.episode}/>} 
             </div>
             
         </div>

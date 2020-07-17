@@ -8,11 +8,11 @@ function EpisodeDetails(props) {
         fetch(props.episodeUrl)
         .then(res => res.json())
         .then(data => setEpisode(data))
-    })
+    }, [])
 
     return(
         <div>
-            <p>{episode.episode}: {episode.name}</p>
+            {episode && <p>{episode.episode}: {episode.name}</p>}
         </div>
     )
 }
